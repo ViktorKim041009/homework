@@ -1,0 +1,33 @@
+
+body{
+		background-color:azure;	
+	}
+.heading{
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-heading{
+		text-align: center;
+		font-size: 56px;
+	}
+.chapter-heading{
+			font-size: 44px;
+	}
+.sub-heading{
+        font-size: 36px;
+	}
+.p{
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-style: italic;
+		font-weight: normal;
+	}
+.txt{
+        text-align: right;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: normal;
+    }
+.marker-circle{
+		list-style-type: circle;
+}
+.nav-item{
+		display:block
+	}
