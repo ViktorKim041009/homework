@@ -1,0 +1,48 @@
+*{	
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+		background-color:skyblue;
+		padding: 30px;	
+	}
+.heading{
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		margin-bottom: 10px;
+}
+.main-heading{
+		text-align: center;
+		font-size: 56px;
+		margin-bottom: 20px;
+	}
+.chapter-heading{
+			font-size: 44px;
+	}
+.sub-heading{
+        font-size: 36px;
+	}
+.p{
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-style: italic;
+		font-weight: normal;
+	}
+.txt{
+        text-align: right;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: normal;
+    }
+.marker-circle{
+		list-style-type: circle;
+		padding-left: 15px;
+}
+.nav-item{
+		display:block
+	}
+.header{
+	margin-bottom: 20px;
+	display: block;
+}
+.main{
+	margin-bottom: 20px;
+}
