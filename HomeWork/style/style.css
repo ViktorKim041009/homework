@@ -32,17 +32,22 @@ body{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-weight: normal;
     }
-.marker-circle{
-		list-style-type: circle;
-		padding-left: 15px;
-}
-.nav-item{
-		display:block
-	}
 .header{
 	margin-bottom: 20px;
 	display: block;
 }
 .main{
 	margin-bottom: 20px;
+}
+.nav-item{
+	display: block;
+}
+.nav{
+	list-style-type: square;
+	/* padding-left: 15px; */
+}
+.img-float{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
