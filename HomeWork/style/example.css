@@ -1,10 +1,11 @@
-*{
+ *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
  }
 .body{
     background-color: rgb(186, 149, 217);
+    margin: 0px;
     padding: 30px;
     max-width: 1600px;
     min-width: 720px;

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-		background-color:skyblue;
+		background-color:bisque;
 		padding: 30px;	
 	}
 .heading{
@@ -32,22 +32,36 @@ body{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-weight: normal;
     }
+.marker-circle{
+		list-style-type: circle;
+		padding-left: 15px;
+}
+.nav-item{
+		display:block
+	}
 .header{
 	margin-bottom: 20px;
 	display: block;
 }
-.main{
+.main-container{
 	margin-bottom: 20px;
+	padding: 20px;
+	background-color: rgb(150, 182, 255);
+	border-radius: 20px;
+
 }
-.nav-item{
-	display: block;
+.main-footer{
+	margin: 0;
 }
-.nav{
-	list-style-type: square;
-	/* padding-left: 15px; */
+.main-header{
+	position: sticky;
+	top: 0;
 }
 .img-float{
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 10px;
+}
+.main-header{
+	background-color: white;
 }
