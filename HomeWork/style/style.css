@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-		background-color:bisque;
+		background-color: bisque;
 		padding: 30px;	
 	}
 .heading{
@@ -48,7 +48,7 @@ body{
 	padding: 20px;
 	background-color: rgb(150, 182, 255);
 	border-radius: 20px;
-
+	box-shadow: blue 0 0 10px;
 }
 .main-footer{
 	margin: 0;
@@ -64,4 +64,21 @@ body{
 }
 .main-header{
 	background-color: white;
+}
+.main-nav{
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+}
+.main-nav-item:hover{
+	transform: scale(1.1);
+	cursor: grab;
+}
+.main-nav-item:active{
+	transform: scale(0.9);
+}
+.main-nav-item{
+	transition-property: transform;
+	transition-duration: 300ms;
 }
