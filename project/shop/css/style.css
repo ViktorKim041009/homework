@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    color: blueviolet;
+}
+html{
+    cursor: url(../pics/cursor.png), auto;
+}
+.body{
+    min-height: 100vh;
+    padding: 40px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    background-image: -webkit-linear-gradient(90deg,#040949,#815c88,#ce9ffc,#7367f0);}
+.main-container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    border: 2px solid blueviolet;
+}
+.btn{
+    text-decoration: none;
+    border: 2px solid blueviolet;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px; 
+    transition: background-color 100ms ease-in-out,
+                        color 100ms ease-in-out,
+                        transform 100ms ease-in-out;
+}
+.btn:hover{
+    background-color: blueviolet;
+    color: white;
+}
+.btn:active{
+    background-color: white;
+    color: blueviolet;
+}
+/*MAIN_HEADER*/
+.main-header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+.main-header-item{
+
+}
+.main-header-title{
+    font-size: 32px;
+    text-decoration: none;
+}
+.main-header-nav{
+
+}
+.main-header-nav-item{
+    text-decoration: none;
+    
+}
+
+/*MAIN*/
+.main{
+    flex-grow: 1;
+}
+/*MAIN FOOTER*/
+.main-footer{
+
+}
