@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
     color: blueviolet;
-    background-color: white;
     font-size: 20px;
 }
 
@@ -18,46 +17,55 @@
 .main-title {
     font-size: 44px;
     text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.sub-title {
+    font-size: 28px;
+}
+
+.link, .btn {
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    outline: none;
 }
 
 .link {
     text-decoration: none;
-    transition-duration: 100ms;
-    transition-timing-function: ease-in-out;
     transition-property: color, transform;
 }
 .link:hover {
     color: rgb(192, 125, 255);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .link:active {
     color: rgb(99, 0, 191);
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .btn {
+    background-color: rgb(99, 0, 191);
+    color: rgb(237, 217, 255);
+    box-shadow: rgb(57, 0, 111) 0 5px;
+    text-align: center;
     text-decoration: none;
-    border: 2px solid rgb(99, 0, 191);
-    background-color: blueviolet;
-    color: white;
     padding: 10px 20px;
+    margin: 0 0 5px;
     font-size: 20px;
     border-radius: 10px;
-    transition-duration: 100ms;
-    transition-timing-function: ease-in-out;
-    transition-property: transform, background-color;
+    transition-property: transform, color, box-shadow;
 }
 .btn::selection {
     background-color: white;
-    color: blueviolet;
+    color: rgb(99, 0, 191);
 }
 .btn:hover {
-    transform: scale(1.1);
-    background-color: rgb(192, 125, 255);
+    color: white;
 }
 .btn:active {
-    transform: scale(0.9);
-    background-color: rgb(99, 0, 191);
+    box-shadow: rgb(41, 0, 80) 0 0;
+    transform: translateY(5px);
 }
 
 /* CONTAINERS */
@@ -66,28 +74,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .one-line-flex-container {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .three-column-grid-container {
-    display: grid;
-    gap: 20px;
-    /* grid-template-columns: repeat(3, auto); */
-    grid-template-columns: repeat(3, 1fr);
-    /* tmp */
-    grid-auto-rows: 100px;
 }
+
 .body {
     min-height: 100vh;
     width: 100%;
     background-image: radial-gradient(rgb(0, 0, 255), rgb(158, 0, 158));
-    padding: 40px;
+    padding: 50px;
     /* gap: 30px; */
 }
 
@@ -96,7 +99,7 @@
     min-width: 720px;
     max-width: 1600px;
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
     border: 1px solid blueviolet;
 }
@@ -112,6 +115,14 @@
     /* gap: 40px; */
 }
 
+.main-header > .btn {
+    background-color: blueviolet;
+    box-shadow: rgb(99, 0, 191) 0 5px;
+}
+.main-header > .btn:active {
+    box-shadow: rgb(99, 0, 191) 0 0;
+}
+
 /* MAIN */
 
 .main {
@@ -119,14 +130,59 @@
 }
 
 .cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
 }
+
 .card {
     background-color: blueviolet;
     color: white;
     padding: 20px;
     border-radius: 15px;
+    box-shadow: rgb(143, 114, 170) 5px 5px 5px;
+
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1.5em;
+    grid-template-areas:
+        "img title"
+        "img price"
+        "txt txt"
+        "btn btn";
 }
+.card > .sub-title {
+    color: white;
+    font-weight: 400;
+    grid-area: title;
+}
+.card > .card-price {
+    font-size: 24px;
+    color: white;
+    grid-area: price;
+}
+.card > .img {
+    grid-area: img;
+    display: block;
+    width: 100%;
+}
+.card > .txt {
+    grid-area: txt;
+    color: white;
+}
+.card > .btn {
+    grid-area: btn;
+}
+
+.card > .sub-title::selection,
+.card > .txt::selection {
+    color: blueviolet;
+    background-color: white;
+}
+
 /* MAIN FOOTER */
 
 .main-footer {
-    justify-content: space-between;}
+    justify-content: space-between;
+}
