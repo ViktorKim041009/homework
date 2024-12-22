@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    color: blueviolet;
+}
+html{
+    cursor: url(../pics/cursor.png), auto;
+}
+.body{
+    background-image: -webkit-linear-gradient(90deg, #150016, #29104A, #522C5D, #845162, #E3B6B1, rgb(237, 222, 205));}
+.main-header{
+    
+}
