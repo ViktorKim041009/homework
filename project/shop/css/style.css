@@ -1,53 +1,61 @@
+html{
+    --darkest: black;
+    --dark: #3d010e ;
+    --middle: #79021c;
+    --light: #b6042a;
+    --ultralight: #f50538;
+    --lightest: #fff;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
-    color: blueviolet;
     font-size: 20px;
 }
-
 ::selection {
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--middle);
+    color: var(--lightest);
 }
 
 /* COMMON ITEMS */
 
-.main-title {
+.big-title{
     font-size: 44px;
     text-decoration: none;
     text-transform: uppercase;
     outline: none;
+    color: var(--lightest);
 }
 
 .sub-title {
     font-size: 28px;
 }
 
-.link, .btn {
+.txt-link, .txt-btn {
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
     outline: none;
 }
 
-.link {
+.txt-link {
     text-decoration: none;
-    transition-property: color, transform;
+    transition-property: color;
+    color: var(--lightest);
 }
-.link:hover {
-    color: rgb(192, 125, 255);
+.txt-link:hover {
+    color: var(--lightest);
     transform: scale(1.05);
 }
-.link:active {
-    color: rgb(99, 0, 191);
+.txt-link:active {
+    color: var(--lightest);
     transform: scale(0.95);
 }
 
-.btn {
-    background-color: rgb(99, 0, 191);
-    color: rgb(237, 217, 255);
-    box-shadow: rgb(57, 0, 111) 0 5px;
+.txt-btn {
+    background-color: var(--light);
+    color: var(--lightest);
+    box-shadow: var(--darkest) 2px 2px 5px;
     text-align: center;
     text-decoration: none;
     padding: 10px 20px;
@@ -56,15 +64,15 @@
     border-radius: 10px;
     transition-property: transform, color, box-shadow;
 }
-.btn::selection {
-    background-color: white;
-    color: rgb(99, 0, 191);
+.txt-btn::selection {
+    background-color: var(--ultralight);
+    color: var(--dark);
 }
-.btn:hover {
-    color: white;
+.txt-btn:hover {
+   color: var(--lightest);
 }
-.btn:active {
-    box-shadow: rgb(41, 0, 80) 0 0;
+.txt-btn:active {
+    box-shadow: var(--dark) 0 0;
     transform: translateY(5px);
 }
 
@@ -83,49 +91,41 @@
     gap: 30px;
 }
 
-.three-column-grid-container {
-}
-
 .body {
     min-height: 100vh;
     width: 100%;
-    background-image: radial-gradient(rgb(0, 0, 255), rgb(158, 0, 158));
+    background-image: radial-gradient(rgb(189, 0, 44), rgb(189, 0, 107));
     padding: 50px;
-    /* gap: 30px; */
 }
 
-.main-container {
+.main-container-header {
     width: 100%;
     min-width: 720px;
     max-width: 1600px;
-    background-color: white;
+    background-color: var(--middle);
     padding: 30px;
     border-radius: 20px;
-    border: 1px solid blueviolet;
+    border: var(--light);
+    justify-content: space-between;
+    box-shadow: var(--darkest) 2px 2px 5px;
 }
 
 /* MAIN HEADER */
-
-.main-header {
-    justify-content: space-between;
-}
-
 .main-nav {
     justify-content: center;
-    /* gap: 40px; */
 }
 
-.main-header > .btn {
-    background-color: blueviolet;
-    box-shadow: rgb(99, 0, 191) 0 5px;
+.main-container-header > .txt-btn {
+    background-color: var(--ultralight);
+    box-shadow: rgb(0, 0, 0) 0 5px;
 }
-.main-header > .btn:active {
-    box-shadow: rgb(99, 0, 191) 0 0;
+.main-container-header > .txt-btn:active {
+    box-shadow: rgb(0, 0, 0) 2px 2px;
 }
 
 /* MAIN */
 
-.main {
+.main-container-main {
     flex-grow: 1;
 }
 
@@ -136,11 +136,11 @@
 }
 
 .card {
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--middle);
+    color: var(--lightest) ;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: rgb(143, 114, 170) 5px 5px 5px;
+    box-shadow: rgb(0, 0, 0) 5px 5px 5px;
 
     display: grid;
     gap: 10px;
@@ -150,16 +150,16 @@
         "img title"
         "img price"
         "txt txt"
-        "btn btn";
+        "txt-btn txt-btn";
 }
 .card > .sub-title {
-    color: white;
+    color: var(--lightest);
     font-weight: 400;
     grid-area: title;
 }
 .card > .card-price {
     font-size: 24px;
-    color: white;
+    color: var(--lightest);
     grid-area: price;
 }
 .card > .img {
@@ -169,20 +169,20 @@
 }
 .card > .txt {
     grid-area: txt;
-    color: white;
+    color: var(--lightest);
 }
-.card > .btn {
-    grid-area: btn;
+.card > .txt-btn {
+    grid-area: txt-btn;
 }
 
 .card > .sub-title::selection,
 .card > .txt::selection {
-    color: blueviolet;
-    background-color: white;
+    color: var(--middle);
+    background-color: var(--lightest);
 }
 
 /* MAIN FOOTER */
 
-.main-footer {
+.main-container-footer {
     justify-content: space-between;
 }
