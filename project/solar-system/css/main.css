@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 :root{ 
-    --base-year: 20s;
-    --base-radius: 175px;
+    --base-year: 10s;
+    --base-radius: 150px;
+
+    --year: var(--base-year);
+    --radius: var(--base-radius);
+
 }
 body{
     width: 100%;
@@ -49,6 +53,14 @@ body{
         translateX(-50%)
         translateY(-50%);
 }
+.orbit-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:
+        translateY(-50%)
+        translateX(-50%);
+}
 @keyframes rotate-planet{
     from{
         transform: rotate(0);
@@ -58,16 +70,34 @@ body{
     }
 }
 .orbit{
-    width: calc(2 * var(--base-radius));
-    height: calc(2 * var(--base-radius));
-    
+    animation-name: rotate-planet;
+    animation-duration: var(--year);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    width: calc(2 * var(--radius));
+    height: calc(2 * var(--radius));
 
     display: flex;
     justify-content: start;
     align-items: center;
-
-    animation-name: rotate-planet;
-    animation-duration: var(--base-year);
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+}
+.planet{
+    transform: translateX(-50%);
+}
+.mars-orbit{
+    --radius: calc(70px + var(--base-radius));
+    --year: calc(1.88 * var(--base-year));
+}
+.jupiter-orbit{
+    --radius: calc(140px + var(--base-radius));
+   --year: calc(2.5 * var(--base-year))
+}
+.saturn-orbit{
+    --radius: calc(240px + var(--base-radius));
+   --year: calc(2.8 * var(--base-year));
+}
+.uranus-orbit{
+    --radius: calc(340px + var(--base-radius));
+   --year: calc(3.2 * var(--base-year));
 }
