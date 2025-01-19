@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{ 
-    --base-year: 10s;
+    --base-year: 5s;
     --base-radius: 150px;
 
     --year: var(--base-year);
@@ -14,6 +14,7 @@
 body{
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
 }
 .stars{
     position: relative;
@@ -85,19 +86,43 @@ body{
 .planet{
     transform: translateX(-50%);
 }
+.earth-orbit{
+    border-radius: 50%;
+   border: 2px solid grey;
+}
 .mars-orbit{
     --radius: calc(70px + var(--base-radius));
     --year: calc(1.88 * var(--base-year));
+    border-radius: 50%;
+    border: 2px solid grey;
 }
 .jupiter-orbit{
     --radius: calc(140px + var(--base-radius));
-   --year: calc(2.5 * var(--base-year))
+    --year: calc(3.76 * var(--base-year));
+    border-radius: 50%;
+    border: 2px solid gray;
 }
 .saturn-orbit{
-    --radius: calc(240px + var(--base-radius));
-   --year: calc(2.8 * var(--base-year));
+    --radius: calc(210px + var(--base-radius));
+    --year: calc(7.52 * var(--base-year));
+    border-radius: 50%;
+    border: 2px solid grey;
 }
 .uranus-orbit{
-    --radius: calc(340px + var(--base-radius));
-   --year: calc(3.2 * var(--base-year));
+    --radius: calc(280px + var(--base-radius));
+    --year: calc(15.04 * var(--base-year));
+    border-radius: 50%;
+    border: 2px solid grey;
+}
+.neptune-orbit{
+    --radius: calc(350px + var(--base-radius));
+    --year: calc(30.08 * var(--base-year));
+    border-radius: 50%;
+    border: 2px solid grey;
+}
+.pluto-orbit{
+    --radius: calc(420px + var(--base-radius));
+    --year: calc(60.16 * var(--base-year));
+    border-radius: 50%;
+    border: 2px solid grey;
 }
