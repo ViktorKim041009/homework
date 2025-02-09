@@ -97,6 +97,7 @@ button {
     display: flex;
     align-items: center;
     column-gap: .25rem;
+    font-size: 1.25rem;
 }
 
 .header-btns {
@@ -125,12 +126,12 @@ button {
     clear: both;
     display: table;
 }
-.main{
+/* .main{ 
     flex: 1px;
     margin-top: 100px;
     padding: 20px;
     position: absolute;
-}
+}*/
 h4{
     margin-top: 15px;
 }
@@ -158,3 +159,36 @@ h4{
     background: #79F8D7;
   }
 
+.nav-list{
+    display: flex;
+    column-gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.nav-list-link{
+    color:  var(--title-color);
+    font-size: 0.25rem;
+    font-weight: var(--fw-medium);
+    font-size: 1.25rem;
+    transition: color .1 ease-in-out;
+}
+.header-btns{
+    margin-left: auto;
+}
+.header-btn{
+    background-color: transparent;
+    border: none;
+}
+.nav-list-link:hover{
+    color: var(--first-color)
+}
+.btn-menu, .btn-close{
+    display: none;
+}
+.btn-close{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    right: 1.25rem;
+    top: 1rem;
+}
