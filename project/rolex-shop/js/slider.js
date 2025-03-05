@@ -6,7 +6,7 @@ let activeSlide = 1;
 
 function normalizeSlideNumber(slide){
     if (slide> SLIDES_COUNT) slide -= SLIDES_COUNT;
-    else if(slide == 0) slide += SLIDES_COUNT
+    else if(slide == 0) slide += SLIDES_COUNT;
     return slide;
 }
 function changeSlide(direction) {

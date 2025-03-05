@@ -342,10 +342,10 @@ h4{
     height: 214px;
 }
 .featured-card-tag{
-    position: absolute;
-    top: 3rem;
+    position:relative;
+    top: 0;
     padding: .5rem 1rem;
-    left: -1rem;
+    left: -9.1rem;
     background-color: var(--first-color);
     color: var(--body-color);
     font-weight: var(--fw-bold);
@@ -379,6 +379,7 @@ h4{
     transition-duration: .3s;
     transform: -1rem;
     opacity: 0;
+    padding: .5rem 2rem;
 }
 .featured-card:hover .featured-card-button{
     opacity: 1;
