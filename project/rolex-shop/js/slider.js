@@ -14,7 +14,7 @@ function changeSlide(direction) {
     else activeSlide++;
     activeSlide = normalizeSlideNumber(activeSlide)
     let prev = normalizeSlideNumber(activeSlide -1);
-    let next= normalizeSlideNumber(active +1);
+    let next= normalizeSlideNumber(activeSlide +1);
     setTimeout(() => {
         SLIDER_ARROW_LEFT.href = `#slide-${prev}`;
         SLIDER_ARROW_RIGHT.href = `#slide-${next}`;
