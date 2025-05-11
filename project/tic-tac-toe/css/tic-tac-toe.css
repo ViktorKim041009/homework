@@ -38,7 +38,8 @@ button{
 }
 .tic-tac-toe__header{
     width: var(--field-width);
-    grid-template-columns: repeat(2, 1fr) ;
+    display: grid;
+    grid-template-columns: 1fr auto ;
     font-size: 1.5rem;
     padding: 1rem;
 }
@@ -57,7 +58,7 @@ button{
 .tic-tac-toe__cell{
     padding: 10%;
     background-color: var(--cell-color);
-    transition: 200ms;
+    transition: .2s;
 }
 .tic-tac-toe__cell--empty{
     opacity: .7;
